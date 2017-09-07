@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.muhammad_usman.mapplotter.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="pre"
+            android:tint="#ffffff"
+            app:srcCompat="@drawable/left" />
+
+        <TextView
+            android:id="@+id/current_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:onClick="post"
+            android:tint="#ffffff"
+            app:srcCompat="@drawable/right" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="31dp"
+        android:clickable="true"
+        android:onClick="Setting"
+        android:src="@android:drawable/ic_menu_edit"
+        app:fabSize="mini" />
+
+
+</RelativeLayout>
