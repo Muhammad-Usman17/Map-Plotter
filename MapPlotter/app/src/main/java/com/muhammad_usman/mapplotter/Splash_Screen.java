@@ -46,14 +46,16 @@ public class Splash_Screen extends AppCompatActivity {
 
     private void startApp() {
 
+        String phoneNumber = Preferences_Manager.getInstance().Data_String("phone", getApplicationContext());
+        if (phoneNumber.isEmpty() || phoneNumber.equalsIgnoreCase("") ) {
 
-//        if () {
-//            Intent intent = new Intent(Splash.this, MainActivity.class);
-//            startActivity(intent);
-//        } else {
+            startActivity(new Intent(this,Setting.class));
+            finish();
+        }else {
+
             Intent intent = new Intent(Splash_Screen.this, MainActivity.class);
             startActivity(intent);
-//        }
+       }
 
     }
 
